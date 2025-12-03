@@ -35,27 +35,27 @@ Powered by a **Unified Multi-Modal Embedding Space (CLIP)** and **Hybrid Search*
 ```mermaid
 graph TD
     subgraph Ingestion
-    A[PDF Document] --> B(Document Processor)
-    B --> C{Chunking Strategy}
-    C -->|Text/Tables| D[Text Chunks]
-    C -->|Images| E[Image Chunks + OCR]
+    A["PDF Document"] --> B("Document Processor")
+    B --> C{"Chunking Strategy"}
+    C -->|Text/Tables| D["Text Chunks"]
+    C -->|Images| E["Image Chunks + OCR"]
     end
     
     subgraph Indexing
-    D --> F[CLIP Embeddings]
+    D --> F["CLIP Embeddings"]
     E --> F
-    F --> G[(FAISS Dense Index)]
-    D --> H[(BM25 Sparse Index)]
+    F --> G[("FAISS Dense Index")]
+    D --> H[("BM25 Sparse Index")]
     end
     
     subgraph Retrieval & Generation
-    I[User Query] --> J{Hybrid Search}
+    I["User Query"] --> J{"Hybrid Search"}
     J -->|Semantic| G
     J -->|Keyword| H
-    G & H --> K[Ranked Results]
-    K --> L[Context Construction]
-    L --> M[LLM (Flan-T5)]
-    M --> N[Answer + Citations + Images]
+    G & H --> K["Ranked Results"]
+    K --> L["Context Construction"]
+    L --> M["LLM (Flan-T5)"]
+    M --> N["Answer + Citations + Images"]
     end
 ```
 
