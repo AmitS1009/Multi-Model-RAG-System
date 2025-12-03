@@ -121,9 +121,5 @@ The system includes a comprehensive evaluation suite to measure performance.
 *   **VLM Integration**: Upgrade to Vision-Language Models (like GPT-4o or LLaVA) for deep visual reasoning.
 *   **Cloud Deployment**: Dockerize the application for scalable deployment on AWS/Azure.
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request or open an issue.
-
 ---
 *Built by AMIT KUSHWAHA*
